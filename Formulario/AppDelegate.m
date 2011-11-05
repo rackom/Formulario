@@ -7,13 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import <LRResty/LRResty.h>
+#import "SBJson.h"
+
+//cells
+#import "CellData.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize fileFieldList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //[self downloadDataAboutFileAtURL:@"http://localhost:3000/documents.json"];
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -55,6 +63,60 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+// vlastne metody
+
+- (void)downloadDataAboutFileAtURL:(NSString *)url {
+    //
+    // pokus na ziskanie PDF struktury
+    //
+    
+    // The url to make the request to
+    [fileFieldList removeAllObjects];
+    
+    [[LRResty client] get:url withBlock:^(LRRestyResponse *r) {
+        NSString *responseString = [r asString];
+        //
+        
+        // 1. the top level value is an array
+        NSArray *results = [responseString JSONValue];
+        
+        // 2. each element in the array is an object/dictionary with
+        // a single key called "user"
+        for (NSDictionary *elem in results) {
+            // 3. the value of the "user" key is itself another object/dictionary
+            // with various key-value pairs
+            // element obsahuje polia prvkov
+            NSArray *element = [elem objectForKey:@"elements"];
+            
+            for (NSDictionary *bunka in element) {
+                // 4. tu uz mame element
+                /*
+                 FieldFlags = 49152;
+                 FieldJustification = Left;
+                 FieldMaxLength = "<null>";
+                 FieldName = "topmostSubform[0].Page1[0].VisuallyInteresting[0]";
+                 FieldNameAlt = "<null>";
+                 FieldType = Button;
+                 id = 86;
+                 */
+                
+                CellData *cell = [[CellData alloc] init];
+                
+                [cell setFieldName:[bunka objectForKey:@"FieldName"]];
+                [cell setFieldNameAlt:[bunka objectForKey:@"FieldNameAlt"]];
+                [cell setFieldFlags:[bunka objectForKey:@"FieldFlags"]];
+                [cell setFieldJustification:[bunka objectForKey:@"FieldJustification"]];
+                [cell setFieldType:[bunka objectForKey:@"FieldType"]];
+                [cell setFieldMaxLength:[bunka objectForKey:@"FieldMaxLength"]];
+                
+                NSLog(@"Mame %@ (\"%@\")", [cell FieldType], [cell FieldNameAlt]);
+                
+                [fileFieldList addObject:cell];
+            }
+        }
+    }];
 }
 
 @end
