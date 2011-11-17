@@ -8,9 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "onlineDocumentsViewController.h"
+#import "myDocumentsViewController.h"
 
 @implementation AppDelegate
 
@@ -21,10 +20,15 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+
+    UIViewController *onlineDocumentsVC = [[onlineDocumentsViewController alloc] init];
+    UINavigationController *onlineDocumentsNavigationController = [[UINavigationController alloc] initWithRootViewController:onlineDocumentsVC];
+    
+    UIViewController *myDocumentsVC = [[myDocumentsViewController alloc] initWithNibName:@"myDocumentsViewController" bundle:nil];
+    UINavigationController *myDocumentsNavigationController = [[UINavigationController alloc] initWithRootViewController:myDocumentsVC];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:onlineDocumentsNavigationController, myDocumentsNavigationController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
