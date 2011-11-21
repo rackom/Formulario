@@ -14,6 +14,8 @@
 		E491D7ED14753E720085EFEC /* FChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E491D7EB14753E720085EFEC /* FChoiceCell.m */; };
 		E491D7EE14753E720085EFEC /* FChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E491D7EC14753E720085EFEC /* FChoiceCell.xib */; };
 		E491D7F114754AAF0085EFEC /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E491D7F014754AAF0085EFEC /* PickerViewController.m */; };
+		E491D8021475B0C60085EFEC /* FCheckBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E491D8001475B0C60085EFEC /* FCheckBoxCell.m */; };
+		E491D8031475B0C60085EFEC /* FCheckBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E491D8011475B0C60085EFEC /* FCheckBoxCell.xib */; };
 		E496F3B114750A4A00C231AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E496F3B014750A4A00C231AF /* UIKit.framework */; };
 		E496F3B314750A4A00C231AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E496F3B214750A4A00C231AF /* Foundation.framework */; };
 		E496F3B514750A4A00C231AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E496F3B414750A4A00C231AF /* CoreGraphics.framework */; };
@@ -59,6 +61,9 @@
 		E491D7EC14753E720085EFEC /* FChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FChoiceCell.xib; sourceTree = "<group>"; };
 		E491D7EF14754AAF0085EFEC /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		E491D7F014754AAF0085EFEC /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		E491D7FF1475B0C60085EFEC /* FCheckBoxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCheckBoxCell.h; sourceTree = "<group>"; };
+		E491D8001475B0C60085EFEC /* FCheckBoxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCheckBoxCell.m; sourceTree = "<group>"; };
+		E491D8011475B0C60085EFEC /* FCheckBoxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCheckBoxCell.xib; sourceTree = "<group>"; };
 		E496F3AC14750A4A00C231AF /* Formulario 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formulario 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E496F3B014750A4A00C231AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E496F3B214750A4A00C231AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +136,7 @@
 		E491D7CA147519940085EFEC /* Formular Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E491D7F61475AD450085EFEC /* FCheckBoxCell */,
 				E491D7E914753E5D0085EFEC /* FChoiceCell */,
 				E491D7E814753DEF0085EFEC /* FTextCell */,
 				E491D7EF14754AAF0085EFEC /* PickerViewController.h */,
@@ -178,6 +184,16 @@
 				E491D7EC14753E720085EFEC /* FChoiceCell.xib */,
 			);
 			name = FChoiceCell;
+			sourceTree = "<group>";
+		};
+		E491D7F61475AD450085EFEC /* FCheckBoxCell */ = {
+			isa = PBXGroup;
+			children = (
+				E491D7FF1475B0C60085EFEC /* FCheckBoxCell.h */,
+				E491D8001475B0C60085EFEC /* FCheckBoxCell.m */,
+				E491D8011475B0C60085EFEC /* FCheckBoxCell.xib */,
+			);
+			name = FCheckBoxCell;
 			sourceTree = "<group>";
 		};
 		E496F3A114750A4A00C231AF = {
@@ -378,6 +394,7 @@
 				E496F3F114750BF000C231AF /* FTextCell.xib in Resources */,
 				E491D7D114751A320085EFEC /* onlineDocumentCell.xib in Resources */,
 				E491D7EE14753E720085EFEC /* FChoiceCell.xib in Resources */,
+				E491D8031475B0C60085EFEC /* FCheckBoxCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +429,7 @@
 				E491D7D91475235B0085EFEC /* documentPresenter.m in Sources */,
 				E491D7ED14753E720085EFEC /* FChoiceCell.m in Sources */,
 				E491D7F114754AAF0085EFEC /* PickerViewController.m in Sources */,
+				E491D8021475B0C60085EFEC /* FCheckBoxCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

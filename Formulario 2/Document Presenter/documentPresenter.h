@@ -12,6 +12,7 @@
 
 #import "FTextCell.h"
 #import "FChoiceCell.h"
+#import "FCheckBoxCell.h"
 
 @interface documentPresenter : UITableViewController
 

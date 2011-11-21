@@ -48,7 +48,11 @@
 }
 
 - (void)setCellProperties {
-    [FCellNameAlt setText:sNameAlt];
+    if ((NSNull *) sNameAlt == [NSNull null]) {
+        [FCellNameAlt setText:@"-"];
+    } else {
+        [FCellNameAlt setText:sNameAlt];
+    }
 }
 
 @end

@@ -92,8 +92,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentity = [NSString stringWithFormat:@"F%@Cell",(NSString *)[(CellData *)[cellTable objectAtIndex:[indexPath row]] FieldType]];
+    NSNumber *flags = [(CellData *)[cellTable objectAtIndex:[indexPath row]] FieldFlags];
     
-    if ([cellIdentity isEqualToString:@"FTextCell"]) {
+    if ([cellIdentity isEqualToString:@"FTextCell"]) { // textove pole
         static NSString *cellIdentifier = @"FTextCell";
         
         FTextCell *cell = (FTextCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -116,7 +117,7 @@
         NSLog(@"%@", [[cellTable objectAtIndex:[indexPath row]] FieldNameAlt]);
         
         return cell;
-    } else if ([cellIdentity isEqualToString:@"FChoiceCell"]) {
+    } else if ([cellIdentity isEqualToString:@"FChoiceCell"]) { // choice
         static NSString *cellIdentifier = @"FChoiceCell";
         
         FChoiceCell *cell = (FChoiceCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -139,7 +140,56 @@
         [cell setCellProperties];
         
         return cell;
-    } else {
+    } else if ([cellIdentity isEqualToString:@"FButtonCell"] && [flags isEqualToNumber:[NSNumber numberWithInt:0]]) { // checkbox
+        static NSString *cellIdentifier = @"FCheckBoxCell";
+        
+        FCheckBoxCell *cell = (FCheckBoxCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil) {
+            NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"FCheckBoxCell" owner:nil options:nil];
+            
+            for (id currentObject in nibObjects) {
+                if([currentObject isKindOfClass:[FCheckBoxCell class]])
+                {
+                    cell = (FCheckBoxCell *)currentObject;
+                }
+            }
+        }
+        
+        //NSLog(@"%@",[jsonManipulator getChoiceListByID:[[cellTable objectAtIndex:[indexPath row]] FieldID]]);
+        [cell setSNameAlt:[[cellTable objectAtIndex:[indexPath row]] FieldNameAlt]];
+        [cell setSCellName:[[cellTable objectAtIndex:[indexPath row]] FieldName]];
+        [cell setCellProperties];
+        
+        return cell;
+    } else if ([cellIdentity isEqualToString:@"FButtonCell"] && [flags isEqualToNumber:[NSNumber numberWithInt:49152]]) { // optionbox
+        static NSString *cellIdentifier = @"FChoiceCell";
+        
+        FChoiceCell *cell = (FChoiceCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil) {
+            NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"FChoiceCell" owner:nil options:nil];
+            
+            for (id currentObject in nibObjects) {
+                if([currentObject isKindOfClass:[FChoiceCell class]])
+                {
+                    cell = (FChoiceCell *)currentObject;
+                }
+            }
+        }
+        
+        [cell setPickerDataSource:[jsonManipulator getChoiceListByID:[[cellTable objectAtIndex:[indexPath row]] FieldID]]];
+        //NSLog(@"%@",[jsonManipulator getChoiceListByID:[[cellTable objectAtIndex:[indexPath row]] FieldID]]);
+        if ([[cellTable objectAtIndex:[indexPath row]] FieldNameAlt]) {
+            [cell setSNameAlt:[[cellTable objectAtIndex:[indexPath row]] FieldNameAlt]];
+        } else {
+            [cell setSNameAlt:@"Vyberte jednu z možností"];
+        }
+        [cell setSCellName:[[cellTable objectAtIndex:[indexPath row]] FieldName]];
+        [cell setCellProperties];
+        
+        return cell;
+    } else { // neznama bunka
         static NSString *CellIdentifier = @"Cell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
