@@ -33,9 +33,12 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [super viewDidLoad];    
+    UIImage *image = [UIImage imageNamed:@"!online.png"];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Online docs"
+                                                     image:image
+                                                       tag:0];
     
-    [self setTitle:@"Online documents"];
     documentArray = [jsonManipulator getAllDocuments];
     [[self tableView] reloadData];
 

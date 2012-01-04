@@ -32,8 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self setTitle:@"My documents"];
+    UIImage *image = [UIImage imageNamed:@"!offline.png"];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"My docs"
+                                                    image:image
+                                                      tag:0];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

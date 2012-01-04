@@ -22,10 +22,6 @@
 		E496F3BB14750A4A00C231AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E496F3B914750A4A00C231AF /* InfoPlist.strings */; };
 		E496F3BD14750A4A00C231AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F3BC14750A4A00C231AF /* main.m */; };
 		E496F3C114750A4A00C231AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F3C014750A4A00C231AF /* AppDelegate.m */; };
-		E496F3C614750A4A00C231AF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E496F3C514750A4A00C231AF /* first.png */; };
-		E496F3C814750A4A00C231AF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E496F3C714750A4A00C231AF /* first@2x.png */; };
-		E496F3CD14750A4A00C231AF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E496F3CC14750A4A00C231AF /* second.png */; };
-		E496F3CF14750A4A00C231AF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E496F3CE14750A4A00C231AF /* second@2x.png */; };
 		E496F3E514750B3700C231AF /* onlineDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F3E314750B3700C231AF /* onlineDocumentsViewController.m */; };
 		E496F3EA14750B6100C231AF /* myDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F3E814750B6100C231AF /* myDocumentsViewController.m */; };
 		E496F3EB14750B6100C231AF /* myDocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E496F3E914750B6100C231AF /* myDocumentsViewController.xib */; };
@@ -46,6 +42,8 @@
 		E496F4491475117C00C231AF /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F43B1475117C00C231AF /* SBJsonTokeniser.m */; };
 		E496F44A1475117C00C231AF /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F43D1475117C00C231AF /* SBJsonUTF8Stream.m */; };
 		E496F44B1475117C00C231AF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E496F43F1475117C00C231AF /* SBJsonWriter.m */; };
+		E4EA657C14B491DB008651B1 /* !offline.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EA657A14B491DB008651B1 /* !offline.png */; };
+		E4EA657D14B491DB008651B1 /* !online.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EA657B14B491DB008651B1 /* !online.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +72,6 @@
 		E496F3BE14750A4A00C231AF /* Formulario 2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Formulario 2-Prefix.pch"; sourceTree = "<group>"; };
 		E496F3BF14750A4A00C231AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E496F3C014750A4A00C231AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E496F3C514750A4A00C231AF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		E496F3C714750A4A00C231AF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		E496F3CC14750A4A00C231AF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		E496F3CE14750A4A00C231AF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		E496F3E214750B3700C231AF /* onlineDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = onlineDocumentsViewController.h; path = "Online Documents/onlineDocumentsViewController.h"; sourceTree = "<group>"; };
 		E496F3E314750B3700C231AF /* onlineDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = onlineDocumentsViewController.m; path = "Online Documents/onlineDocumentsViewController.m"; sourceTree = "<group>"; };
 		E496F3E714750B6100C231AF /* myDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myDocumentsViewController.h; path = "My Documents/myDocumentsViewController.h"; sourceTree = "<group>"; };
@@ -116,6 +110,8 @@
 		E496F43D1475117C00C231AF /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		E496F43E1475117C00C231AF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		E496F43F1475117C00C231AF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E4EA657A14B491DB008651B1 /* !offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!offline.png"; sourceTree = "<group>"; };
+		E4EA657B14B491DB008651B1 /* !online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!online.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,10 +230,8 @@
 				E496F3DB14750AA200C231AF /* My Documents */,
 				E496F3BF14750A4A00C231AF /* AppDelegate.h */,
 				E496F3C014750A4A00C231AF /* AppDelegate.m */,
-				E496F3C514750A4A00C231AF /* first.png */,
-				E496F3C714750A4A00C231AF /* first@2x.png */,
-				E496F3CC14750A4A00C231AF /* second.png */,
-				E496F3CE14750A4A00C231AF /* second@2x.png */,
+				E4EA657A14B491DB008651B1 /* !offline.png */,
+				E4EA657B14B491DB008651B1 /* !online.png */,
 				E496F3B714750A4A00C231AF /* Supporting Files */,
 			);
 			path = "Formulario 2";
@@ -386,15 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E496F3BB14750A4A00C231AF /* InfoPlist.strings in Resources */,
-				E496F3C614750A4A00C231AF /* first.png in Resources */,
-				E496F3C814750A4A00C231AF /* first@2x.png in Resources */,
-				E496F3CD14750A4A00C231AF /* second.png in Resources */,
-				E496F3CF14750A4A00C231AF /* second@2x.png in Resources */,
 				E496F3EB14750B6100C231AF /* myDocumentsViewController.xib in Resources */,
 				E496F3F114750BF000C231AF /* FTextCell.xib in Resources */,
 				E491D7D114751A320085EFEC /* onlineDocumentCell.xib in Resources */,
 				E491D7EE14753E720085EFEC /* FChoiceCell.xib in Resources */,
 				E491D8031475B0C60085EFEC /* FCheckBoxCell.xib in Resources */,
+				E4EA657C14B491DB008651B1 /* !offline.png in Resources */,
+				E4EA657D14B491DB008651B1 /* !online.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
